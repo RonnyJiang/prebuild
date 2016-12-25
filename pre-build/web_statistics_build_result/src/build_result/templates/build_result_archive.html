@@ -1,0 +1,21 @@
+{% extends "base.html" %}  
+{% block title %}Build Result{% endblock %}
+{% block headTitle %}<center>Build Result</center>{% endblock %}
+{% block content %}
+<center><form action="/get_search_result_date/" method="get">
+	<select id="repo_id" name="repo" style="width:120px;">
+			<option id='ALL' value='ALL'>ALL</option>
+		{% for repo_info in repo_list %}
+			<option id={{repo_info}} value={{repo_info}}>{{repo_info}}</option>
+		{% endfor %}
+	</select>
+	<label for="meeting">开始日期：</label>
+	<input id="starttime_id" name="starttime" type="date" onchange="compareTime('starttime_id', 'endtime_id')"/>
+	<label for="meeting">截止日期：</label>
+	<input id="endtime_id" name="endtime" type="date" onchange="compareTime('starttime_id', 'endtime_id')"/>
+	<!--<input id="search_id" type="submit" value="搜索" onClick="search_result('repo_id','starttime_id','endtime_id','get_search_result')" />-->
+	<input id="search_id" type="submit" value="搜索" />
+</form></center>
+{% include 'build_result_table.html' %}
+{% include 'foot_page.html' %}
+{% endblock %}

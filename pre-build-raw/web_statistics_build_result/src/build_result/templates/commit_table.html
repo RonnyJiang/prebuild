@@ -1,0 +1,24 @@
+<table width="900px" align="center" class="altrowstable" id="alternatecolor">
+<tr>
+<th style="text-align:center">Issue ID</td>
+<th style="text-align:center">Gerrit</td>
+<th style="text-align:center">Build Status</td>
+</tr>
+{% for issue_info in post_list.items %}  
+	{% for commit_info in issue_info.1 %}
+		<tr>
+		{% if forloop.first %}
+		    <td rowspan={{issue_info.1|length}} style="text-align:center">{{issue_info.0}}</td>
+		{% endif %}
+		    <td style="text-align:center"><a href={{commit_info.gerrit}} target="_blank">{{commit_info.gerrit}}</a></td>
+		    <td style="text-align:center">
+		    	{% ifequal commit_info.build_result True %}
+		    		success
+		    	{% else %}
+		    		fail
+		    	{% endifequal %}
+		    </td>
+	    </tr>
+	{% endfor %} 
+{% endfor %}  
+</table>

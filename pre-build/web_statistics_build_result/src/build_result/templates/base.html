@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<!-- Javascript goes in the document HEAD -->
+<script src="/static/js/jquery-1.8.2.js"></script> 
+<script type="text/javascript">
+function altRows(id){
+	if(document.getElementsByTagName){  
+		
+		var table = document.getElementById(id);  
+		var rows = table.getElementsByTagName("tr"); 
+		 
+		for(i = 0; i < rows.length; i++){          
+			if(i % 2 == 0){
+				rows[i].className = "evenrowcolor";
+			}else{
+				rows[i].className = "oddrowcolor";
+			}      
+		}
+	}
+}
+function getNow(id){
+	var date = new Date();
+	var myyear = date.getFullYear();
+	var mymonth = date.getMonth()+1;
+	if(mymonth < 10) {
+		mymonth = "0" + mymonth;
+	}
+	var mydate = date.getDate();
+	if(mydate < 10) {
+		mydate = "0" + mydate;
+	}
+	var ymd = myyear+"-"+mymonth+"-"+mydate;
+	var x = document.getElementById(id);
+	x.value = ymd;
+}
+function getMonday(id){
+	var now = new Date(); 
+	var nowTime = now.getTime(); 
+	var day = now.getDay();
+	var oneDayLong = 24*60*60*1000; 
+	var MondayTime = nowTime - (day-1)*oneDayLong; 
+	var monday = new Date(MondayTime);
+	var myyear = monday.getFullYear();
+	var mymonth = monday.getMonth()+1;
+	if(mymonth < 10) {
+		mymonth = "0" + mymonth;
+	}
+	var mydate = monday.getDate();
+	if(mydate < 10) {
+		mydate = "0" + mydate;
+	}
+	var ymd = myyear+"-"+mymonth+"-"+mydate;
+	var x = document.getElementById(id);
+	x.value = ymd;
+}
+function compareTime(startId, endId){
+	var startWidget = document.getElementById(startId);
+	var endWidget = document.getElementById(endId);
+	var startTimeValue = startWidget.value;
+	var endTimeValue = endWidget.value;
+	var startDate = new Date(startTimeValue).getTime();
+	var endDate = new Date(endTimeValue).getTime();
+	var nowDate = new Date().getTime();
+	console.error(startDate);
+	console.error(endDate);
+	console.error(nowDate);
+	if(startDate>nowDate || endDate>nowDate){
+		alert('日期不能大于今天!');
+		getMonday(startId);
+		getNow(endId);
+	}else if(startDate>endDate){
+		alert('开始日期要大于截止日期!');
+		getMonday(startId);
+		getNow(endId);
+	}
+}
+function get_selected_id(item){
+	var widget = document.getElementById(item);
+	var selected_id = widget.options[widget.selectedIndex].id;
+	return selected_id;
+}
+function search_result(repo_id,starttime_id,endtime_id,action){
+	var repo = get_selected_id(repo_id);
+	var starttime = document.getElementById(starttime_id).value;
+	var endtime = document.getElementById(endtime_id).value;
+	if(action=='get_search_result'){
+		get_search_date(repo, starttime, endtime);
+	}
+}
+function get_search_date(repo, starttime, endtime){
+	$.getJSON('get_search_result_date',{'repo':repo,'starttime':starttime,'endtime':endtime},function(post_list){
+		console.error(post_list);
+	})
+}
+window.onload=function(){
+	altRows('alternatecolor');
+	getMonday('starttime_id');
+	getNow('endtime_id');
+}
+</script>
+<style type="text/css">
+table.altrowstable {
+	font-family: verdana,arial,sans-serif;
+	font-size:13px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #a9c6c9;
+	border-collapse: collapse;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+table.altrowstable th {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #a9c6c9;
+}
+table.altrowstable td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #a9c6c9;
+}
+.oddrowcolor{
+	background-color:#d4e3e5;
+}
+.evenrowcolor{
+	background-color:#c3dde0;
+}
+a:link.paginator { 
+	font-size: 12px; 
+	color: #000000; 
+	text-decoration: none; 
+} 
+a:visited.paginator { 
+	font-size: 12px; 
+	color: #000000; 
+	text-decoration: none; 
+} 
+a:hover.paginator { 
+	font-size: 12px; 
+	color: #ff0000; 
+	text-decoration: underline; 
+} 
+a.paginator_current {
+	font-size: 12px; 
+	color: #0000ff; 
+	text-decoration: none; 
+}
+</style>
+<body>
+    <h1>{% block headTitle %}{% endblock %}</h1>
+    {% block content %}{% endblock %}
+</body>
+</html>

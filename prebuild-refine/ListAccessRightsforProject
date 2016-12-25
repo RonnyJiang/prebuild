@@ -1,0 +1,288 @@
+//gerrit interface
+//获取单个项目的权限：
+Request
+  'GET /projects/{project-name}/access'
+
+eg:
+
+Request
+
+  GET /projects/MyProject/access HTTP/1.0
+
+Response
+
+  HTTP/1.1 200 OK
+  Content-Type: application/json; charset=UTF-8
+
+  )]}'
+  {
+    "revision": "61157ed63e14d261b6dca40650472a9b0bd88474",
+    "inherits_from": {
+      "id": "All-Projects",
+      "name": "All-Projects",
+      "description": "Access inherited by all other projects."
+    },
+    "local": {
+        "refs/*": {
+          "permissions": {
+            "read": {
+              "rules": {
+                "c2ce4749a32ceb82cd6adcce65b8216e12afb41c": {
+                  "action": "ALLOW",
+                  "force": false
+                },
+                "global:Anonymous-Users": {
+                  "action": "ALLOW",
+                  "force": false
+                }
+              }
+            }
+          }
+        }
+    },
+    "is_owner": true,
+    "owner_of": [
+      "refs/*"
+    ],
+    "can_upload": true,
+    "can_add": true,
+    "config_visible": true
+  }
+
+
+
+
+//增加　更新　删除　项目的权限(remove,add)
+Request
+  'POST /projects/{project-name}/access'
+
+
+eg:(remove)
+
+Request
+
+  POST /projects/MyProject/access HTTP/1.0
+  Content-Type: application/json; charset=UTF-8
+
+  {
+    "remove": [
+      "refs/*": {
+        "permissions": {
+          "read": {
+            "rules": {
+              "c2ce4749a32ceb82cd6adcce65b8216e12afb41c": {
+                "action": "ALLOW"
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+
+Response
+
+  HTTP/1.1 200 OK
+  Content-Type: application/json; charset=UTF-8
+
+  )]}'
+  {
+    "revision": "61157ed63e14d261b6dca40650472a9b0bd88474",
+    "inherits_from": {
+      "id": "All-Projects",
+      "name": "All-Projects",
+      "description": "Access inherited by all other projects."
+    },
+    "local": {
+        "refs/*": {
+          "permissions": {
+            "read": {
+              "rules": {
+                "global:Anonymous-Users": {
+                  "action": "ALLOW",
+                  "force": false
+                }
+              }
+            }
+          }
+        }
+    },
+    "is_owner": true,
+    "owner_of": [
+      "refs/*"
+    ],
+    "can_upload": true,
+    "can_add": true,
+    "config_visible": true
+  }
+
+
+
+//
+//'GET /projects/{project-name}/access'
+//
+//Lists the access rights for a single project.
+//
+//As result a ProjectAccessInfo entity is returned.
+//Request
+//
+//  GET /projects/MyProject/access HTTP/1.0
+
+ HTTP/1.1 200 OK
+  Content-Type: application/json; charset=UTF-8
+
+  )]}'
+  {
+    "revision": "61157ed63e14d261b6dca40650472a9b0bd88474",
+    "inherits_from": {
+      "id": "All-Projects",
+      "name": "All-Projects",
+      "description": "Access inherited by all other projects."
+    },
+    "local": {
+        "refs/*": {
+          "permissions": {
+            "read": {
+              "rules": {
+                "c2ce4749a32ceb82cd6adcce65b8216e12afb41c": {
+                  "action": "ALLOW",
+                  "force": false
+                },
+                "global:Anonymous-Users": {
+                  "action": "ALLOW",
+                  "force": false
+                }
+              }
+            }
+          }
+        }
+    },
+    "is_owner": true,
+    "owner_of": [
+      "refs/*"
+    ],
+    "can_upload": true,
+    "can_add": true,
+    "config_visible": true
+  }
+
+
+
+// add label-verified rights
+Request
+
+  POST /projects/MyProject/access HTTP/1.0
+  Content-Type: application/json; charset=UTF-8
+
+  {
+    "remove": [
+       "refs/meta/config": {
+          "permissions": {
+            "submit": {
+              "rules": {
+                "53a4f647a89ea57992571187d8025f830625192a": {
+                  "action": "ALLOW"
+                },
+                "global:Project-Owners": {
+                  "action": "ALLOW"
+                }
+              }
+            },
+            "label-Code-Review": {
+              "label": "Code-Review",
+              "rules": {
+                "53a4f647a89ea57992571187d8025f830625192a": {
+                  "action": "ALLOW",
+                  "min": -2,
+                  "max": 2
+                },
+                "global:Project-Owners": {
+                  "action": "ALLOW",
+                  "min": -2,
+                  "max": 2
+                }
+              }
+            },
+            "read": {
+              "exclusive": true,
+              "rules": {
+                "53a4f647a89ea57992571187d8025f830625192a": {
+                  "action": "ALLOW"
+                },
+                "global:Project-Owners": {
+                  "action": "ALLOW"
+                }
+              }
+            },
+            "push": {
+              "rules": {
+                "53a4f647a89ea57992571187d8025f830625192a": {
+                  "action": "ALLOW"
+                },
+                "global:Project-Owners": {
+                  "action": "ALLOW"
+                }
+              }
+            }
+          }
+        }
+    ]
+  }
+
+-----add verified rights---exclusiveGroupPermissions----------------------------------------------------------------
+
+Request
+
+  POST /projects/${project_name}/access HTTP/1.0
+  Content-Type: application/json; charset=UTF-8
+
+  {
+    "add": [
+       "refs/heads/${branch}": {
+          "permissions": {
+            "label-Verified": {
+              "label": "Verified",
+              "exclusive": true,
+              "rules": {
+                "53a4f647a89ea57992571187d8025f830625192a": {
+                  "action": "ALLOW",
+                  "min": -1,
+                  "max": 1
+                }
+              }
+            }
+          }
+        }
+    ]
+  }
+
+Request
+  'POST /projects/{project-name}/access'
+
+-----remove verified rights---exclusiveGroupPermissions----------------------------------------------------------------
+
+
+Request
+
+  POST /projects/MyProject/access HTTP/1.0
+  Content-Type: application/json; charset=UTF-8
+
+  {
+    "remove": [
+      "refs/heads/${branch}": {
+        "permissions": {
+          "label-Verified": {
+            "label": "Verified",
+            "exclusive": true,
+            "rules": {
+              "c2ce4749a32ceb82cd6adcce65b8216e12afb41c": {
+                "action": "ALLOW"
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+
+//53a4f647a89ea57992571187d8025f830625192a　为tools的UUID

@@ -1,0 +1,339 @@
+2016-12-21 13:58:16,378 INFO(139763317729024)            : ------------------------------------------------------
+2016-12-21 13:58:16,378 INFO(139763317729024)            : main IN
+2016-12-21 13:58:16,378 INFO(139763317729024)            : ['/home/ronny/PycharmProjects/prebuild/prebuild-refine/change_access_config.py', 'aurora_plus_trigger_config.bak', '--init_remote_config']
+2016-12-21 13:58:16,378 INFO(139763317729024)            : change remote verify rights IN
+2016-12-21 13:58:16,378 INFO(139763317729024)            : init_verify_rights IN
+2016-12-21 13:58:16,378 INFO(139763317729024)            : check_trigger_config_file: aurora_plus_trigger_config.bak
+2016-12-21 13:58:16,378 INFO(139763317729024)            : get project list IN
+2016-12-21 13:58:16,379 INFO(139763317729024)            : get project list OUT
+2016-12-21 13:58:16,379 INFO(139763317729024)            : Obtain project list from aurora_plus_trigger_config.bak successfully
+2016-12-21 13:58:16,379 INFO(139763317729024)            : Init project:venus/tvos/platform/hardware/broadcom/libbt ,branch:aurora-plus
+2016-12-21 13:58:16,379 INFO(139763317729024)            : Init project:venus/tvos/platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.6 ,branch:aurora-plus
+2016-12-21 13:58:16,379 INFO(139763317729024)            : Init project:venus/tvos/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8 ,branch:aurora-plus
+2016-12-21 13:58:16,379 INFO(139763317729024)            : Init project:venus/tvos/platform/frameworks/opt/chips ,branch:dev
+2016-12-21 13:58:16,379 INFO(139763317729024)            : Init project:venus/tvos/platform/external/webp ,branch:master
+2016-12-21 13:58:16,379 INFO(139763317729024)            : Init project:venus/tvos/platform/external/speex ,branch:aurora-plus
+2016-12-21 13:58:16,379 INFO(139763317729024)            : Init project:venus/tvos/platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8 ,branch:aurora-plus
+2016-12-21 13:58:16,379 INFO(139763317729024)            : Init project:venus/tvos/platform/external/webrtc ,branch:dev
+2016-12-21 13:58:16,379 INFO(139763317729024)            : Init project:venus/platform/external/chromium_org/third_party/leveldatabase/src ,branch:aurora_tvos
+2016-12-21 13:58:16,379 INFO(139763317729024)            : Init project:venus/tvos/platform/prebuilts/python/darwin-x86/2.7.5 ,branch:master
+2016-12-21 13:58:16,379 INFO(139763317729024)            : init_verify_rights OUT
+2016-12-21 13:58:16,379 INFO(139763317729024)            : change remote verify rights OUT
+2016-12-21 13:58:16,379 INFO(139763317729024)            : main OUT
+2016-12-21 13:58:16,379 INFO(139763317729024)            : ------------------------------------------------------
+2016-12-21 13:59:17,482 INFO(140447432619776)            : ------------------------------------------------------
+2016-12-21 13:59:17,483 INFO(140447432619776)            : main IN
+2016-12-21 13:59:17,483 INFO(140447432619776)            : ['/home/ronny/PycharmProjects/prebuild/prebuild-refine/change_access_config.py', 'aurora_plus_trigger_config', 'aurora_plus_trigger_config.bak']
+2016-12-21 13:59:17,483 INFO(140447432619776)            : change remote verify rights IN
+2016-12-21 13:59:17,483 INFO(140447432619776)            : update_verify_rights IN
+2016-12-21 13:59:17,483 INFO(140447432619776)            : check_trigger_config_file: aurora_plus_trigger_config
+2016-12-21 13:59:17,483 INFO(140447432619776)            : get project list IN
+2016-12-21 13:59:17,483 INFO(140447432619776)            : get project list OUT
+2016-12-21 13:59:17,484 INFO(140447432619776)            : Obtain project list from aurora_plus_trigger_config successfully
+2016-12-21 13:59:17,484 INFO(140447432619776)            : check_trigger_config_file: aurora_plus_trigger_config.bak
+2016-12-21 13:59:17,484 INFO(140447432619776)            : get project list IN
+2016-12-21 13:59:17,484 INFO(140447432619776)            : get project list OUT
+2016-12-21 13:59:17,484 INFO(140447432619776)            : Obtain project list from aurora_plus_trigger_config.bak successfully
+2016-12-21 13:59:17,484 INFO(140447432619776)            : Reset project:venus/tvos/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8 ,branch:aurora-plus
+2016-12-21 13:59:17,484 INFO(140447432619776)            : Reset project:venus/tvos/platform/external/webp ,branch:master
+2016-12-21 13:59:17,484 INFO(140447432619776)            : Init project:venus/tvos/platform/packages/wallpapers/NoiseField ,branch:dev
+2016-12-21 13:59:17,484 INFO(140447432619776)            : Init project:venus/platform/external/chromium_org/third_party/libjpeg_turbo ,branch:master
+2016-12-21 13:59:17,484 INFO(140447432619776)            : Init project:venus/tvos/platform/hardware/qcom/display ,branch:aurora-plus
+2016-12-21 13:59:17,484 INFO(140447432619776)            : update_verify_rights OUT
+2016-12-21 13:59:17,484 INFO(140447432619776)            : change remote verify rights OUT
+2016-12-21 13:59:17,484 INFO(140447432619776)            : main OUT
+2016-12-21 13:59:17,484 INFO(140447432619776)            : ------------------------------------------------------
+2016-12-21 13:59:59,891 INFO(140584564160256)            : ------------------------------------------------------
+2016-12-21 13:59:59,891 INFO(140584564160256)            : main IN
+2016-12-21 13:59:59,891 INFO(140584564160256)            : ['/home/ronny/PycharmProjects/prebuild/prebuild-refine/change_access_config.py', 'aurora_plus_trigger_config', '--reset_remote_config']
+2016-12-21 13:59:59,891 INFO(140584564160256)            : change remote verify rights IN
+2016-12-21 13:59:59,891 INFO(140584564160256)            : reset verify rights IN
+2016-12-21 13:59:59,891 INFO(140584564160256)            : check_trigger_config_file: aurora_plus_trigger_config
+2016-12-21 13:59:59,891 INFO(140584564160256)            : get project list IN
+2016-12-21 13:59:59,892 INFO(140584564160256)            : get project list OUT
+2016-12-21 13:59:59,892 INFO(140584564160256)            : Obtain project list from aurora_plus_trigger_config successfully
+2016-12-21 13:59:59,892 INFO(140584564160256)            : Reset project:venus/tvos/platform/hardware/broadcom/libbt ,branch:aurora-plus
+2016-12-21 13:59:59,892 INFO(140584564160256)            : Reset project:venus/tvos/platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.6 ,branch:aurora-plus
+2016-12-21 13:59:59,892 INFO(140584564160256)            : Reset project:venus/tvos/platform/frameworks/opt/chips ,branch:dev
+2016-12-21 13:59:59,892 INFO(140584564160256)            : Reset project:venus/tvos/platform/packages/wallpapers/NoiseField ,branch:dev
+2016-12-21 13:59:59,892 INFO(140584564160256)            : Reset project:venus/tvos/platform/external/speex ,branch:aurora-plus
+2016-12-21 13:59:59,892 INFO(140584564160256)            : Reset project:venus/tvos/platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8 ,branch:aurora-plus
+2016-12-21 13:59:59,892 INFO(140584564160256)            : Reset project:venus/platform/external/chromium_org/third_party/libjpeg_turbo ,branch:master
+2016-12-21 13:59:59,892 INFO(140584564160256)            : Reset project:venus/tvos/platform/external/webrtc ,branch:dev
+2016-12-21 13:59:59,892 INFO(140584564160256)            : Reset project:venus/platform/external/chromium_org/third_party/leveldatabase/src ,branch:aurora_tvos
+2016-12-21 13:59:59,892 INFO(140584564160256)            : Reset project:venus/tvos/platform/hardware/qcom/display ,branch:aurora-plus
+2016-12-21 13:59:59,892 INFO(140584564160256)            : Reset project:venus/tvos/platform/prebuilts/python/darwin-x86/2.7.5 ,branch:master
+2016-12-21 13:59:59,892 INFO(140584564160256)            : reset verify rights OUT
+2016-12-21 13:59:59,892 INFO(140584564160256)            : change remote verify rights OUT
+2016-12-21 13:59:59,892 INFO(140584564160256)            : main OUT
+2016-12-21 13:59:59,892 INFO(140584564160256)            : ------------------------------------------------------
+2016-12-21 22:32:57,480 INFO(140591446865664)            : ------------------------------------------------------
+2016-12-21 22:32:57,480 INFO(140591446865664)            : main IN
+2016-12-21 22:32:57,481 INFO(140591446865664)            : ['/home/ronny/PycharmProjects/prebuild/prebuild-refine/change_access_config.py', 'aurora_plus_trigger_config', 'aurora_plus_trigger_config.bak']
+2016-12-21 22:32:57,481 INFO(140591446865664)            : change remote verify rights IN
+2016-12-21 22:32:57,481 INFO(140591446865664)            : update_verify_rights IN
+2016-12-21 22:32:57,481 INFO(140591446865664)            : check_trigger_config_file: aurora_plus_trigger_config
+2016-12-21 22:32:57,482 INFO(140591446865664)            : get project list IN
+2016-12-21 22:33:44,040 INFO(140208548206336)            : ------------------------------------------------------
+2016-12-21 22:33:44,040 INFO(140208548206336)            : main IN
+2016-12-21 22:33:44,041 INFO(140208548206336)            : ['/home/ronny/PycharmProjects/prebuild/prebuild-refine/change_access_config.py', 'aurora_plus_trigger_config', 'aurora_plus_trigger_config.bak']
+2016-12-21 22:33:44,041 INFO(140208548206336)            : change remote verify rights IN
+2016-12-21 22:33:44,041 INFO(140208548206336)            : update_verify_rights IN
+2016-12-21 22:33:44,041 INFO(140208548206336)            : check_trigger_config_file: aurora_plus_trigger_config
+2016-12-21 22:33:44,041 INFO(140208548206336)            : get project list IN
+2016-12-21 22:33:44,041 INFO(140208548206336)            : get project list OUT
+2016-12-21 22:33:44,041 INFO(140208548206336)            : Obtain project list from aurora_plus_trigger_config successfully
+2016-12-21 22:33:44,041 INFO(140208548206336)            : check_trigger_config_file: aurora_plus_trigger_config.bak
+2016-12-21 22:33:44,041 INFO(140208548206336)            : get project list IN
+2016-12-21 22:33:44,042 INFO(140208548206336)            : get project list OUT
+2016-12-21 22:33:44,042 INFO(140208548206336)            : Obtain project list from aurora_plus_trigger_config.bak successfully
+2016-12-21 22:33:44,042 INFO(140208548206336)            : Reset project:venus/tvos/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8 ,branch:aurora-plus
+2016-12-21 22:33:44,042 INFO(140208548206336)            : Reset project:venus/tvos/platform/external/webp ,branch:master
+2016-12-21 22:33:44,042 INFO(140208548206336)            : Init project:venus/tvos/platform/packages/wallpapers/NoiseField ,branch:dev
+2016-12-21 22:33:44,042 INFO(140208548206336)            : Init project:venus/platform/external/chromium_org/third_party/libjpeg_turbo ,branch:master
+2016-12-21 22:33:44,042 INFO(140208548206336)            : Init project:venus/tvos/platform/hardware/qcom/display ,branch:aurora-plus
+2016-12-21 22:33:44,042 INFO(140208548206336)            : update_verify_rights OUT
+2016-12-21 22:33:44,042 INFO(140208548206336)            : change remote verify rights OUT
+2016-12-21 22:33:44,042 INFO(140208548206336)            : main OUT
+2016-12-21 22:33:44,042 INFO(140208548206336)            : ------------------------------------------------------
+2016-12-21 22:34:24,072 INFO(140604455237376)            : ------------------------------------------------------
+2016-12-21 22:34:24,072 INFO(140604455237376)            : main IN
+2016-12-21 22:34:24,072 INFO(140604455237376)            : ['/home/ronny/PycharmProjects/prebuild/prebuild-refine/change_access_config.py', 'aurora_plus_trigger_config', 'aurora_plus_trigger_config.bak']
+2016-12-21 22:34:24,072 INFO(140604455237376)            : change remote verify rights IN
+2016-12-21 22:34:24,072 INFO(140604455237376)            : update_verify_rights IN
+2016-12-21 22:34:24,072 INFO(140604455237376)            : check_trigger_config_file: aurora_plus_trigger_config
+2016-12-21 22:34:24,072 INFO(140604455237376)            : get project list IN
+2016-12-21 22:34:24,073 INFO(140604455237376)            : get project list OUT
+2016-12-21 22:34:24,073 INFO(140604455237376)            : Obtain project list from aurora_plus_trigger_config successfully
+2016-12-21 22:34:24,073 INFO(140604455237376)            : check_trigger_config_file: aurora_plus_trigger_config.bak
+2016-12-21 22:34:24,073 INFO(140604455237376)            : get project list IN
+2016-12-21 22:34:24,073 INFO(140604455237376)            : get project list OUT
+2016-12-21 22:34:24,073 INFO(140604455237376)            : Obtain project list from aurora_plus_trigger_config.bak successfully
+2016-12-21 22:34:24,073 INFO(140604455237376)            : Reset project:venus/tvos/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8 ,branch:aurora-plus
+2016-12-21 22:34:24,073 INFO(140604455237376)            : Reset project:venus/tvos/platform/external/webp ,branch:master
+2016-12-21 22:34:24,073 INFO(140604455237376)            : Init project:venus/tvos/platform/packages/wallpapers/NoiseField ,branch:dev
+2016-12-21 22:34:24,073 INFO(140604455237376)            : Init project:venus/tvos/platform/external/speex ,branch:aurora-plus
+2016-12-21 22:34:24,073 INFO(140604455237376)            : Init project:venus/platform/external/chromium_org/third_party/libjpeg_turbo ,branch:master
+2016-12-21 22:34:24,073 INFO(140604455237376)            : Init project:venus/tvos/platform/hardware/qcom/display ,branch:aurora-plus
+2016-12-21 22:34:24,073 INFO(140604455237376)            : update_verify_rights OUT
+2016-12-21 22:34:24,073 INFO(140604455237376)            : change remote verify rights OUT
+2016-12-21 22:34:24,074 INFO(140604455237376)            : main OUT
+2016-12-21 22:34:24,074 INFO(140604455237376)            : ------------------------------------------------------
+2016-12-21 22:35:34,077 INFO(140381514766080)            : ------------------------------------------------------
+2016-12-21 22:35:34,077 INFO(140381514766080)            : main IN
+2016-12-21 22:35:34,077 INFO(140381514766080)            : ['/home/ronny/PycharmProjects/prebuild/prebuild-refine/change_access_config.py', 'aurora_plus_trigger_config', 'aurora_plus_trigger_config.bak']
+2016-12-21 22:35:34,077 INFO(140381514766080)            : change remote verify rights IN
+2016-12-21 22:35:34,077 INFO(140381514766080)            : update_verify_rights IN
+2016-12-21 22:35:34,078 INFO(140381514766080)            : check_trigger_config_file: aurora_plus_trigger_config
+2016-12-21 22:35:34,078 INFO(140381514766080)            : get project list IN
+2016-12-21 22:35:34,078 INFO(140381514766080)            : get project list OUT
+2016-12-21 22:35:34,078 INFO(140381514766080)            : Obtain project list from aurora_plus_trigger_config successfully
+2016-12-21 22:35:34,078 INFO(140381514766080)            : check_trigger_config_file: aurora_plus_trigger_config.bak
+2016-12-21 22:35:34,078 INFO(140381514766080)            : get project list IN
+2016-12-21 22:35:34,078 INFO(140381514766080)            : get project list OUT
+2016-12-21 22:35:34,078 INFO(140381514766080)            : Obtain project list from aurora_plus_trigger_config.bak successfully
+2016-12-21 22:35:34,078 INFO(140381514766080)            : Reset project:venus/tvos/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8 ,branch:aurora-plus
+2016-12-21 22:35:34,078 INFO(140381514766080)            : Reset project:venus/tvos/platform/external/webp ,branch:master
+2016-12-21 22:35:34,078 INFO(140381514766080)            : Init project:venus/tvos/platform/packages/wallpapers/NoiseField ,branch:dev
+2016-12-21 22:35:34,079 INFO(140381514766080)            : Init project:venus/platform/external/chromium_org/third_party/libjpeg_turbo ,branch:master
+2016-12-21 22:35:34,079 INFO(140381514766080)            : Init project:venus/tvos/platform/hardware/qcom/display ,branch:aurora-plus
+2016-12-21 22:35:34,079 INFO(140381514766080)            : update_verify_rights OUT
+2016-12-21 22:35:34,079 INFO(140381514766080)            : change remote verify rights OUT
+2016-12-21 22:35:34,079 INFO(140381514766080)            : main OUT
+2016-12-21 22:35:34,079 INFO(140381514766080)            : ------------------------------------------------------
+2016-12-21 22:36:07,993 INFO(140472072361728)            : ------------------------------------------------------
+2016-12-21 22:36:07,993 INFO(140472072361728)            : main IN
+2016-12-21 22:36:07,993 INFO(140472072361728)            : ['/home/ronny/PycharmProjects/prebuild/prebuild-refine/change_access_config.py', 'aurora_plus_trigger_config', 'aurora_plus_trigger_config.bak']
+2016-12-21 22:36:07,993 INFO(140472072361728)            : change remote verify rights IN
+2016-12-21 22:36:07,994 INFO(140472072361728)            : update_verify_rights IN
+2016-12-21 22:36:07,994 INFO(140472072361728)            : check_trigger_config_file: aurora_plus_trigger_config
+2016-12-21 22:36:07,994 INFO(140472072361728)            : get project list IN
+2016-12-21 22:36:07,995 INFO(140472072361728)            : get project list OUT
+2016-12-21 22:36:07,995 INFO(140472072361728)            : Obtain project list from aurora_plus_trigger_config successfully
+2016-12-21 22:36:07,995 INFO(140472072361728)            : check_trigger_config_file: aurora_plus_trigger_config.bak
+2016-12-21 22:36:07,995 INFO(140472072361728)            : get project list IN
+2016-12-21 22:36:07,996 INFO(140472072361728)            : get project list OUT
+2016-12-21 22:36:07,996 INFO(140472072361728)            : Obtain project list from aurora_plus_trigger_config.bak successfully
+2016-12-21 22:36:07,996 INFO(140472072361728)            : Reset project:venus/tvos/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8 ,branch:aurora-plus
+2016-12-21 22:36:07,996 INFO(140472072361728)            : Reset project:venus/tvos/platform/external/webp ,branch:master
+2016-12-21 22:36:07,996 INFO(140472072361728)            : Init project:venus/tvos/platform/packages/wallpapers/NoiseField ,branch:dev
+2016-12-21 22:36:07,996 INFO(140472072361728)            : Init project:venus/platform/external/chromium_org/third_party/libjpeg_turbo ,branch:master
+2016-12-21 22:36:07,996 INFO(140472072361728)            : Init project:venus/tvos/platform/hardware/qcom/display ,branch:aurora-plus
+2016-12-21 22:36:07,996 INFO(140472072361728)            : update_verify_rights OUT
+2016-12-21 22:36:07,997 INFO(140472072361728)            : change remote verify rights OUT
+2016-12-21 22:36:07,997 INFO(140472072361728)            : main OUT
+2016-12-21 22:36:07,997 INFO(140472072361728)            : ------------------------------------------------------
+2016-12-21 22:36:45,288 INFO(139930567042816)            : ------------------------------------------------------
+2016-12-21 22:36:45,289 INFO(139930567042816)            : main IN
+2016-12-21 22:36:45,289 INFO(139930567042816)            : ['/home/ronny/PycharmProjects/prebuild/prebuild-refine/change_access_config.py', 'aurora_plus_trigger_config', 'aurora_plus_trigger_config.bak']
+2016-12-21 22:36:45,289 INFO(139930567042816)            : change remote verify rights IN
+2016-12-21 22:36:45,289 INFO(139930567042816)            : update_verify_rights IN
+2016-12-21 22:36:45,289 INFO(139930567042816)            : check_trigger_config_file: aurora_plus_trigger_config
+2016-12-21 22:36:45,290 INFO(139930567042816)            : get project list IN
+2016-12-21 22:36:45,291 INFO(139930567042816)            : get project list OUT
+2016-12-21 22:36:45,291 INFO(139930567042816)            : Obtain project list from aurora_plus_trigger_config successfully
+2016-12-21 22:36:45,291 INFO(139930567042816)            : check_trigger_config_file: aurora_plus_trigger_config.bak
+2016-12-21 22:36:45,291 INFO(139930567042816)            : get project list IN
+2016-12-21 22:36:45,291 INFO(139930567042816)            : get project list OUT
+2016-12-21 22:36:45,292 INFO(139930567042816)            : Obtain project list from aurora_plus_trigger_config.bak successfully
+2016-12-21 22:36:45,292 INFO(139930567042816)            : Reset project:venus/tvos/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8 ,branch:aurora-plus
+2016-12-21 22:36:45,292 INFO(139930567042816)            : Reset project:venus/tvos/platform/external/webp ,branch:master
+2016-12-21 22:36:45,292 INFO(139930567042816)            : Init project:venus/tvos/platform/packages/wallpapers/NoiseField ,branch:dev
+2016-12-21 22:36:45,292 INFO(139930567042816)            : Init project:venus/platform/external/chromium_org/third_party/libjpeg_turbo ,branch:master
+2016-12-21 22:36:45,292 INFO(139930567042816)            : update_verify_rights OUT
+2016-12-21 22:36:45,292 INFO(139930567042816)            : change remote verify rights OUT
+2016-12-21 22:36:45,292 INFO(139930567042816)            : main OUT
+2016-12-21 22:36:45,292 INFO(139930567042816)            : ------------------------------------------------------
+2016-12-21 22:37:05,080 INFO(140372549973760)            : ------------------------------------------------------
+2016-12-21 22:37:05,080 INFO(140372549973760)            : main IN
+2016-12-21 22:37:05,081 INFO(140372549973760)            : ['/home/ronny/PycharmProjects/prebuild/prebuild-refine/change_access_config.py', 'aurora_plus_trigger_config', 'aurora_plus_trigger_config.bak']
+2016-12-21 22:37:05,081 INFO(140372549973760)            : change remote verify rights IN
+2016-12-21 22:37:05,081 INFO(140372549973760)            : update_verify_rights IN
+2016-12-21 22:37:05,081 INFO(140372549973760)            : check_trigger_config_file: aurora_plus_trigger_config
+2016-12-21 22:37:05,081 INFO(140372549973760)            : get project list IN
+2016-12-21 22:37:05,081 INFO(140372549973760)            : get project list OUT
+2016-12-21 22:37:05,081 INFO(140372549973760)            : Obtain project list from aurora_plus_trigger_config successfully
+2016-12-21 22:37:05,081 INFO(140372549973760)            : check_trigger_config_file: aurora_plus_trigger_config.bak
+2016-12-21 22:37:05,081 INFO(140372549973760)            : get project list IN
+2016-12-21 22:37:05,081 INFO(140372549973760)            : get project list OUT
+2016-12-21 22:37:05,081 INFO(140372549973760)            : Obtain project list from aurora_plus_trigger_config.bak successfully
+2016-12-21 22:37:05,081 INFO(140372549973760)            : Reset project:venus/tvos/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8 ,branch:aurora-plus
+2016-12-21 22:37:05,082 INFO(140372549973760)            : Reset project:venus/tvos/platform/external/webp ,branch:master
+2016-12-21 22:37:05,082 INFO(140372549973760)            : Init project:venus/tvos/platform/packages/wallpapers/NoiseField ,branch:dev
+2016-12-21 22:37:05,082 INFO(140372549973760)            : Init project:venus/platform/external/chromium_org/third_party/libjpeg_turbo ,branch:master
+2016-12-21 22:37:05,082 INFO(140372549973760)            : Init project:venus/tvos/platform/hardware/qcom/display ,branch:aurora-plus
+2016-12-21 22:37:05,082 INFO(140372549973760)            : update_verify_rights OUT
+2016-12-21 22:37:05,082 INFO(140372549973760)            : change remote verify rights OUT
+2016-12-21 22:37:05,082 INFO(140372549973760)            : main OUT
+2016-12-21 22:37:05,082 INFO(140372549973760)            : ------------------------------------------------------
+2016-12-21 22:43:24,543 INFO(140296816133888)            : ------------------------------------------------------
+2016-12-21 22:43:24,543 INFO(140296816133888)            : main IN
+2016-12-21 22:43:24,543 INFO(140296816133888)            : ['/home/ronny/PycharmProjects/prebuild/prebuild-refine/change_access_config.py', 'aurora_plus_trigger_config', 'aurora_plus_trigger_config.bak']
+2016-12-21 22:43:24,543 INFO(140296816133888)            : change remote verify rights IN
+2016-12-21 22:43:24,543 INFO(140296816133888)            : update_verify_rights IN
+2016-12-21 22:43:24,543 INFO(140296816133888)            : check_trigger_config_file: aurora_plus_trigger_config
+2016-12-21 22:43:24,543 INFO(140296816133888)            : get project list IN
+2016-12-21 22:43:24,544 INFO(140296816133888)            : get project list OUT
+2016-12-21 22:43:24,544 INFO(140296816133888)            : Obtain project list from aurora_plus_trigger_config successfully
+2016-12-21 22:43:24,544 INFO(140296816133888)            : check_trigger_config_file: aurora_plus_trigger_config.bak
+2016-12-21 22:43:24,544 INFO(140296816133888)            : get project list IN
+2016-12-21 22:43:24,544 INFO(140296816133888)            : get project list OUT
+2016-12-21 22:43:24,544 INFO(140296816133888)            : Obtain project list from aurora_plus_trigger_config.bak successfully
+2016-12-21 22:43:24,544 INFO(140296816133888)            : Reset project:venus/tvos/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8 ,branch:aurora-plus
+2016-12-21 22:43:24,544 INFO(140296816133888)            : Reset project:venus/tvos/platform/external/webp ,branch:master
+2016-12-21 22:43:24,544 INFO(140296816133888)            : Init project:venus/tvos/platform/packages/wallpapers/NoiseField ,branch:dev
+2016-12-21 22:43:24,544 INFO(140296816133888)            : Init project:venus/platform/external/chromium_org/third_party/libjpeg_turbo ,branch:master
+2016-12-21 22:43:24,544 INFO(140296816133888)            : update_verify_rights OUT
+2016-12-21 22:43:24,544 INFO(140296816133888)            : change remote verify rights OUT
+2016-12-21 22:43:24,544 INFO(140296816133888)            : main OUT
+2016-12-21 22:43:24,544 INFO(140296816133888)            : ------------------------------------------------------
+2016-12-21 22:43:36,902 INFO(140205894371072)            : ------------------------------------------------------
+2016-12-21 22:43:36,902 INFO(140205894371072)            : main IN
+2016-12-21 22:43:36,902 INFO(140205894371072)            : ['/home/ronny/PycharmProjects/prebuild/prebuild-refine/change_access_config.py', 'aurora_plus_trigger_config', 'aurora_plus_trigger_config.bak']
+2016-12-21 22:43:36,903 INFO(140205894371072)            : change remote verify rights IN
+2016-12-21 22:43:36,903 INFO(140205894371072)            : update_verify_rights IN
+2016-12-21 22:43:36,903 INFO(140205894371072)            : check_trigger_config_file: aurora_plus_trigger_config
+2016-12-21 22:43:36,903 INFO(140205894371072)            : get project list IN
+2016-12-21 22:43:36,904 INFO(140205894371072)            : get project list OUT
+2016-12-21 22:43:36,904 INFO(140205894371072)            : Obtain project list from aurora_plus_trigger_config successfully
+2016-12-21 22:43:36,904 INFO(140205894371072)            : check_trigger_config_file: aurora_plus_trigger_config.bak
+2016-12-21 22:43:36,904 INFO(140205894371072)            : get project list IN
+2016-12-21 22:43:36,904 INFO(140205894371072)            : get project list OUT
+2016-12-21 22:43:36,904 INFO(140205894371072)            : Obtain project list from aurora_plus_trigger_config.bak successfully
+2016-12-21 22:43:36,905 INFO(140205894371072)            : Reset project:venus/tvos/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8 ,branch:aurora-plus
+2016-12-21 22:43:36,905 INFO(140205894371072)            : Reset project:venus/tvos/platform/external/webp ,branch:master
+2016-12-21 22:43:36,905 INFO(140205894371072)            : Init project:venus/tvos/platform/packages/wallpapers/NoiseField ,branch:dev
+2016-12-21 22:43:36,905 INFO(140205894371072)            : Init project:venus/platform/external/chromium_org/third_party/libjpeg_turbo ,branch:master
+2016-12-21 22:43:36,905 INFO(140205894371072)            : Init project:venus/tvos/platform/hardware/qcom/display ,branch:aurora-plus
+2016-12-21 22:43:36,905 INFO(140205894371072)            : update_verify_rights OUT
+2016-12-21 22:43:36,905 INFO(140205894371072)            : change remote verify rights OUT
+2016-12-21 22:43:36,905 INFO(140205894371072)            : main OUT
+2016-12-21 22:43:36,905 INFO(140205894371072)            : ------------------------------------------------------
+2016-12-21 22:44:05,392 INFO(139968483890944)            : ------------------------------------------------------
+2016-12-21 22:44:05,392 INFO(139968483890944)            : main IN
+2016-12-21 22:44:05,392 INFO(139968483890944)            : ['/home/ronny/PycharmProjects/prebuild/prebuild-refine/change_access_config.py', 'aurora_plus_trigger_config', 'aurora_plus_trigger_config.bak']
+2016-12-21 22:44:05,393 INFO(139968483890944)            : change remote verify rights IN
+2016-12-21 22:44:05,393 INFO(139968483890944)            : update_verify_rights IN
+2016-12-21 22:44:05,393 INFO(139968483890944)            : check_trigger_config_file: aurora_plus_trigger_config
+2016-12-21 22:44:05,393 INFO(139968483890944)            : get project list IN
+2016-12-21 22:44:05,393 INFO(139968483890944)            : get project list OUT
+2016-12-21 22:44:05,393 INFO(139968483890944)            : Obtain project list from aurora_plus_trigger_config successfully
+2016-12-21 22:44:05,393 INFO(139968483890944)            : check_trigger_config_file: aurora_plus_trigger_config.bak
+2016-12-21 22:44:05,393 INFO(139968483890944)            : get project list IN
+2016-12-21 22:44:05,393 INFO(139968483890944)            : get project list OUT
+2016-12-21 22:44:05,393 INFO(139968483890944)            : Obtain project list from aurora_plus_trigger_config.bak successfully
+2016-12-21 22:44:05,393 INFO(139968483890944)            : Reset project:venus/tvos/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8 ,branch:aurora-plus
+2016-12-21 22:44:05,393 INFO(139968483890944)            : Reset project:venus/tvos/platform/external/webp ,branch:master
+2016-12-21 22:44:05,393 INFO(139968483890944)            : Init project:venus/tvos/platform/packages/wallpapers/NoiseField ,branch:dev
+2016-12-21 22:44:05,394 INFO(139968483890944)            : Init project:venus/platform/external/chromium_org/third_party/libjpeg_turbo ,branch:master
+2016-12-21 22:44:05,394 INFO(139968483890944)            : Init project:venus/tvos/platform/hardware/qcom/display ,branch:aurora-plus
+2016-12-21 22:44:05,394 INFO(139968483890944)            : update_verify_rights OUT
+2016-12-21 22:44:05,394 INFO(139968483890944)            : change remote verify rights OUT
+2016-12-21 22:44:05,394 INFO(139968483890944)            : main OUT
+2016-12-21 22:44:05,394 INFO(139968483890944)            : ------------------------------------------------------
+2016-12-21 22:44:47,246 INFO(140344820627200)            : ------------------------------------------------------
+2016-12-21 22:44:47,247 INFO(140344820627200)            : main IN
+2016-12-21 22:44:47,247 INFO(140344820627200)            : ['/home/ronny/PycharmProjects/prebuild/prebuild-refine/change_access_config.py', 'aurora_plus_trigger_config', 'aurora_plus_trigger_config.bak']
+2016-12-21 22:44:47,247 INFO(140344820627200)            : change remote verify rights IN
+2016-12-21 22:44:47,247 INFO(140344820627200)            : update_verify_rights IN
+2016-12-21 22:44:47,247 INFO(140344820627200)            : check_trigger_config_file: aurora_plus_trigger_config
+2016-12-21 22:44:47,247 INFO(140344820627200)            : get project list IN
+2016-12-21 22:44:47,247 INFO(140344820627200)            : get project list OUT
+2016-12-21 22:44:47,247 INFO(140344820627200)            : Obtain project list from aurora_plus_trigger_config successfully
+2016-12-21 22:44:47,247 INFO(140344820627200)            : check_trigger_config_file: aurora_plus_trigger_config.bak
+2016-12-21 22:44:47,247 INFO(140344820627200)            : get project list IN
+2016-12-21 22:44:47,247 INFO(140344820627200)            : get project list OUT
+2016-12-21 22:44:47,247 INFO(140344820627200)            : Obtain project list from aurora_plus_trigger_config.bak successfully
+2016-12-21 22:44:47,247 INFO(140344820627200)            : Reset project:venus/tvos/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8 ,branch:aurora-plus
+2016-12-21 22:44:47,248 INFO(140344820627200)            : Reset project:venus/tvos/platform/external/webp ,branch:master
+2016-12-21 22:44:47,248 INFO(140344820627200)            : Init project:venus/tvos/platform/packages/wallpapers/NoiseField ,branch:dev
+2016-12-21 22:44:47,248 INFO(140344820627200)            : Init project:venus/platform/external/chromium_org/third_party/libjpeg_turbo ,branch:master
+2016-12-21 22:44:47,248 INFO(140344820627200)            : Init project:venus/tvos/platform/hardware/qcom/display ,branch:aurora-plus
+2016-12-21 22:44:47,248 INFO(140344820627200)            : update_verify_rights OUT
+2016-12-21 22:44:47,248 INFO(140344820627200)            : change remote verify rights OUT
+2016-12-21 22:44:47,248 INFO(140344820627200)            : main OUT
+2016-12-21 22:44:47,248 INFO(140344820627200)            : ------------------------------------------------------
+2016-12-21 22:45:00,672 INFO(140048264451840)            : ------------------------------------------------------
+2016-12-21 22:45:00,672 INFO(140048264451840)            : main IN
+2016-12-21 22:45:00,672 INFO(140048264451840)            : ['/home/ronny/PycharmProjects/prebuild/prebuild-refine/change_access_config.py', 'aurora_plus_trigger_config', 'aurora_plus_trigger_config.bak']
+2016-12-21 22:45:00,672 INFO(140048264451840)            : change remote verify rights IN
+2016-12-21 22:45:00,672 INFO(140048264451840)            : update_verify_rights IN
+2016-12-21 22:45:00,672 INFO(140048264451840)            : check_trigger_config_file: aurora_plus_trigger_config
+2016-12-21 22:45:00,672 INFO(140048264451840)            : get project list IN
+2016-12-21 22:45:00,673 INFO(140048264451840)            : get project list OUT
+2016-12-21 22:45:00,674 INFO(140048264451840)            : Obtain project list from aurora_plus_trigger_config successfully
+2016-12-21 22:45:00,674 INFO(140048264451840)            : check_trigger_config_file: aurora_plus_trigger_config.bak
+2016-12-21 22:45:00,674 INFO(140048264451840)            : get project list IN
+2016-12-21 22:45:00,674 INFO(140048264451840)            : get project list OUT
+2016-12-21 22:45:00,674 INFO(140048264451840)            : Obtain project list from aurora_plus_trigger_config.bak successfully
+2016-12-21 22:45:00,674 INFO(140048264451840)            : Reset project:venus/tvos/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8 ,branch:aurora-plus
+2016-12-21 22:45:00,674 INFO(140048264451840)            : Reset project:venus/tvos/platform/external/webp ,branch:master
+2016-12-21 22:45:00,674 INFO(140048264451840)            : Init project:venus/tvos/platform/packages/wallpapers/NoiseField ,branch:dev
+2016-12-21 22:45:00,674 INFO(140048264451840)            : Init project:venus/platform/external/chromium_org/third_party/libjpeg_turbo ,branch:master
+2016-12-21 22:45:00,674 INFO(140048264451840)            : Init project:venus/tvos/platform/hardware/qcom/display ,branch:aurora-plus
+2016-12-21 22:45:00,674 INFO(140048264451840)            : update_verify_rights OUT
+2016-12-21 22:45:00,674 INFO(140048264451840)            : change remote verify rights OUT
+2016-12-21 22:45:00,674 INFO(140048264451840)            : main OUT
+2016-12-21 22:45:00,674 INFO(140048264451840)            : ------------------------------------------------------
+2016-12-21 22:45:39,639 INFO(139783059150592)            : ------------------------------------------------------
+2016-12-21 22:45:39,639 INFO(139783059150592)            : main IN
+2016-12-21 22:45:39,639 INFO(139783059150592)            : ['/home/ronny/PycharmProjects/prebuild/prebuild-refine/change_access_config.py', 'aurora_plus_trigger_config', 'aurora_plus_trigger_config.bak']
+2016-12-21 22:45:39,639 INFO(139783059150592)            : change remote verify rights IN
+2016-12-21 22:45:39,639 INFO(139783059150592)            : update_verify_rights IN
+2016-12-21 22:45:39,639 INFO(139783059150592)            : check_trigger_config_file: aurora_plus_trigger_config
+2016-12-21 22:45:39,639 INFO(139783059150592)            : get project list IN
+2016-12-21 22:45:39,640 INFO(139783059150592)            : get project list OUT
+2016-12-21 22:45:39,640 INFO(139783059150592)            : Obtain project list from aurora_plus_trigger_config successfully
+2016-12-21 22:45:39,640 INFO(139783059150592)            : check_trigger_config_file: aurora_plus_trigger_config.bak
+2016-12-21 22:45:39,640 INFO(139783059150592)            : get project list IN
+2016-12-21 22:45:39,640 INFO(139783059150592)            : get project list OUT
+2016-12-21 22:45:39,640 INFO(139783059150592)            : Obtain project list from aurora_plus_trigger_config.bak successfully
+2016-12-21 22:45:39,640 INFO(139783059150592)            : Reset project:venus/tvos/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8 ,branch:aurora-plus
+2016-12-21 22:45:39,640 INFO(139783059150592)            : Reset project:venus/tvos/platform/external/webp ,branch:master
+2016-12-21 22:45:39,640 INFO(139783059150592)            : Init project:venus/tvos/platform/packages/wallpapers/NoiseField ,branch:dev
+2016-12-21 22:45:39,640 INFO(139783059150592)            : Init project:venus/platform/external/chromium_org/third_party/libjpeg_turbo ,branch:master
+2016-12-21 22:45:39,640 INFO(139783059150592)            : Init project:venus/tvos/platform/hardware/qcom/display ,branch:aurora-plus
+2016-12-21 22:45:39,640 INFO(139783059150592)            : update_verify_rights OUT
+2016-12-21 22:45:39,640 INFO(139783059150592)            : change remote verify rights OUT
+2016-12-21 22:45:39,640 INFO(139783059150592)            : main OUT
+2016-12-21 22:45:39,640 INFO(139783059150592)            : ------------------------------------------------------

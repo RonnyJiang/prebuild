@@ -1,0 +1,119 @@
+/usr/bin/python2.7 /home/ronny/PycharmProjects/prebuild/prebuild-refine/gerrit_test.py
+project=android%2FBilling
+http://10.27.254.101:2089/a/access/?project=android%2FBilling
+200
+)]}'
+{
+  "android/Billing": {
+    "revision": "04a2d6f5616b498790682395a941c212c956b38a",
+    "inherits_from": {
+      "kind": "gerritcodereview#project",
+      "id": "All-Projects",
+      "name": "All-Projects",
+      "description": "Rights inherited by all other projects."
+    },
+    "local": {
+      "refs/for/*": {
+        "permissions": {
+          "pushMerge": {
+            "rules": {
+              "862cb7a870122c7f50c1503ea2f18ca148ca0277": {
+                "action": "ALLOW"
+              }
+            }
+          },
+          "pushTag": {
+            "rules": {
+              "862cb7a870122c7f50c1503ea2f18ca148ca0277": {
+                "action": "ALLOW"
+              }
+            }
+          },
+          "push": {
+            "rules": {
+              "862cb7a870122c7f50c1503ea2f18ca148ca0277": {
+                "action": "ALLOW"
+              }
+            }
+          }
+        }
+      },
+      "refs/heads/master": {
+        "permissions": {
+          "label-Verified": {
+            "label": "Verified",
+            "exclusive": true,
+            "rules": {
+              "827de1e3b53db7a2f6c1a3ee24b3f2d7a47f0f8a": {
+                "action": "ALLOW",
+                "min": -1,
+                "max": 1
+              }
+            }
+          }
+        }
+      },
+      "refs/*": {
+        "permissions": {
+          "submit": {
+            "rules": {
+              "59c1836b3180931977085250d08d69c579026122": {
+                "action": "ALLOW"
+              }
+            }
+          },
+          "label-Verified": {
+            "label": "Verified",
+            "rules": {
+              "59c1836b3180931977085250d08d69c579026122": {
+                "action": "ALLOW",
+                "min": -1,
+                "max": 1
+              }
+            }
+          },
+          "label-Code-Review": {
+            "label": "Code-Review",
+            "rules": {
+              "59c1836b3180931977085250d08d69c579026122": {
+                "action": "ALLOW",
+                "min": -2,
+                "max": 2
+              }
+            }
+          },
+          "read": {
+            "rules": {
+              "862cb7a870122c7f50c1503ea2f18ca148ca0277": {
+                "action": "ALLOW"
+              }
+            }
+          },
+          "create": {
+            "rules": {
+              "59c1836b3180931977085250d08d69c579026122": {
+                "action": "ALLOW"
+              }
+            }
+          },
+          "label-Manual-Test": {
+            "label": "Manual-Test",
+            "rules": {
+              "59c1836b3180931977085250d08d69c579026122": {
+                "action": "ALLOW",
+                "min": -1,
+                "max": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "owner_of": [],
+    "can_upload": true,
+    "config_visible": true
+  }
+}
+
+
+Process finished with exit code 0

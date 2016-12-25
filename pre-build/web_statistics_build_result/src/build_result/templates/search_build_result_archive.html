@@ -1,0 +1,12 @@
+{% extends "base.html" %}  
+{% block title %}Build Result{% endblock %}
+{% block headTitle %}<center>Search Result</center>{% endblock %}
+{% block content %}
+{% if error %}
+<p style="color: red;">Please submit a search term.</p>
+{% elif not post_list %}
+<p style="color: red;">the search result is NULL.</p>
+{% else %}
+{% include 'build_result_table.html' %}
+{% endif %}
+{% endblock %}

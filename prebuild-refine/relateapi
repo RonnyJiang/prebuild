@@ -1,0 +1,325 @@
+https://gerrit.omnirom.org/Documentation/rest-api-accounts.html
+
+
+Delete Watched Projects
+
+'POST /accounts/{account-id}/watched.projects:delete'
+
+Projects posted to this endpoint will no longer be watched. The posted body can contain a list of ProjectWatchInfo entities.
+Request
+
+  POST /a/accounts/self/watched.projects:delete HTTP/1.0
+  Content-Type: application/json;charset=UTF-8
+
+  [
+    {
+      "project": "Test Project 1",
+      "filter": "branch:master"
+    }
+  ]
+
+Response
+
+  HTTP/1.1 204 No Content
+
+
+
+
+---------------------------------------------------------------------------------------------------
+https://gerrit.omnirom.org/Documentation/rest-api-projects.html#project-access-info
+---------------------------------------------------------------------------------------------------
+List Access Rights for Project
+---------------------------------------------------------------------------------------------------
+
+'GET /projects/{project-name}/access'
+
+
+Lists the access rights for a single project.
+
+As result a ProjectAccessInfo entity is returned.
+---------------------------------------------------------------------------------------------------
+Request
+
+  GET /projects/MyProject/access HTTP/1.0
+
+Response
+---------------------------------------------------------------------------------------------------
+  HTTP/1.1 200 OK
+  Content-Type: application/json; charset=UTF-8
+
+  )]}'
+  {
+    "revision": "61157ed63e14d261b6dca40650472a9b0bd88474",
+    "inherits_from": {
+      "id": "All-Projects",
+      "name": "All-Projects",
+      "description": "Access inherited by all other projects."
+    },
+    "local": {
+        "refs/*": {
+          "permissions": {
+            "read": {
+              "rules": {
+                "c2ce4749a32ceb82cd6adcce65b8216e12afb41c": {
+                  "action": "ALLOW",
+                  "force": false
+                },
+                "global:Anonymous-Users": {
+                  "action": "ALLOW",
+                  "force": false
+                }
+              }
+            }
+          }
+        }
+    },
+    "is_owner": true,
+    "owner_of": [
+      "refs/*"
+    ],
+    "can_upload": true,
+    "can_add": true,
+    "config_visible": true
+  }
+
+
+
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+Add, Update and Delete Access Rights for Project
+
+'POST /projects/{project-name}/access'
+
+Sets access rights for the project using the diff schema provided by ProjectAccessInput. Deductions are used to remove access sections, permissions or permission rules. The backend will remove the entity with the finest granularity in the request, meaning that if an access section without permissions is posted, the access section will be removed; if an access section with a permission but no permission rules is posted, the permission will be removed; if an access section with a permission and a permission rule is posted, the permission rule will be removed.
+
+Additionally, access sections and permissions will be cleaned up after applying the deductions by removing items that have no child elements.
+
+After removals have been applied, additions will be applied.
+
+As result a ProjectAccessInfo entity is returned.
+---------------------------------------------------------------------------------------------------
+Request
+
+  POST /projects/MyProject/access HTTP/1.0
+  Content-Type: application/json; charset=UTF-8
+
+  {
+    "remove": [
+      "refs/*": {
+        "permissions": {
+          "read": {
+            "rules": {
+              "c2ce4749a32ceb82cd6adcce65b8216e12afb41c": {
+                "action": "ALLOW"
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+
+---------------------------------------------------------------------------------------------------
+Response
+
+  HTTP/1.1 200 OK
+  Content-Type: application/json; charset=UTF-8
+
+  )]}'
+  {
+    "revision": "61157ed63e14d261b6dca40650472a9b0bd88474",
+    "inherits_from": {
+      "id": "All-Projects",
+      "name": "All-Projects",
+      "description": "Access inherited by all other projects."
+    },
+    "local": {
+        "refs/*": {
+          "permissions": {
+            "read": {
+              "rules": {
+                "global:Anonymous-Users": {
+                  "action": "ALLOW",
+                  "force": false
+                }
+              }
+            }
+          }
+        }
+    },
+    "is_owner": true,
+    "owner_of": [
+      "refs/*"
+    ],
+    "can_upload": true,
+    "can_add": true,
+    "config_visible": true
+  }
+
+---------------------------------------------------------------------------------------------------
+
+
+###################################add verified rights###################################
+---------------------------------------------------------------------------------------------------
+Request
+
+  POST /projects/MyProject/access HTTP/1.0
+  Content-Type: application/json; charset=UTF-8
+
+  {
+    "remove": [
+      "refs/head/branchname": {
+        "permissions": {
+          "read": {
+            "rules": {
+              "c2ce4749a32ceb82cd6adcce65b8216e12afb41c": {
+                "action": "ALLOW"
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+
+---------------------------------------------------------------------------------------------------
+
+
+Request
+
+  POST /projects/MyProject/access HTTP/1.0
+  Content-Type: application/json; charset=UTF-8
+
+  {
+    "remove": [
+       "refs/meta/config": {
+          "permissions": {
+            "submit": {
+              "rules": {
+                "53a4f647a89ea57992571187d8025f830625192a": {
+                  "action": "ALLOW"
+                },
+                "global:Project-Owners": {
+                  "action": "ALLOW"
+                }
+              }
+            },
+            "label-Code-Review": {
+              "label": "Code-Review",
+              "rules": {
+                "53a4f647a89ea57992571187d8025f830625192a": {
+                  "action": "ALLOW",
+                  "min": -2,
+                  "max": 2
+                },
+                "global:Project-Owners": {
+                  "action": "ALLOW",
+                  "min": -2,
+                  "max": 2
+                }
+              }
+            },
+            "read": {
+              "exclusive": true,
+              "rules": {
+                "53a4f647a89ea57992571187d8025f830625192a": {
+                  "action": "ALLOW"
+                },
+                "global:Project-Owners": {
+                  "action": "ALLOW"
+                }
+              }
+            },
+            "push": {
+              "rules": {
+                "53a4f647a89ea57992571187d8025f830625192a": {
+                  "action": "ALLOW"
+                },
+                "global:Project-Owners": {
+                  "action": "ALLOW"
+                }
+              }
+            }
+          }
+        }
+    ]
+  }
+
+
+
+  -change post ----------------------------------------------------------------------------------
+
+Request
+
+  POST /projects/${project_name}/access HTTP/1.0
+  Content-Type: application/json; charset=UTF-8
+
+  {
+    "remove": [
+       "refs/heads/${branch}": {
+          "permissions": {
+            "submit": {
+              "rules": {
+                "53a4f647a89ea57992571187d8025f830625192a": {
+                  "action": "ALLOW"
+                },
+                "global:Project-Owners": {
+                  "action": "ALLOW"
+                }
+              }
+            },
+            "label-Code-Review": {
+              "label": "Code-Review",
+              "rules": {
+                "53a4f647a89ea57992571187d8025f830625192a": {
+                  "action": "ALLOW",
+                  "min": -2,
+                  "max": 2
+                },
+                "global:Project-Owners": {
+                  "action": "ALLOW",
+                  "min": -2,
+                  "max": 2
+                }
+              }
+            },
+            "label-Verified": {
+              "label": "Code-Review",
+              "rules": {
+                "53a4f647a89ea57992571187d8025f830625192a": {
+                  "action": "ALLOW",
+                  "min": -1,
+                  "max": 1
+                },
+                "global:Project-Owners": {
+                  "action": "ALLOW",
+                  "min": -2,
+                  "max": 2
+                }
+              }
+            },
+            "read": {
+              "exclusive": true,
+              "rules": {
+                "53a4f647a89ea57992571187d8025f830625192a": {
+                  "action": "ALLOW"
+                },
+                "global:Project-Owners": {
+                  "action": "ALLOW"
+                }
+              }
+            },
+            "push": {
+              "rules": {
+                "53a4f647a89ea57992571187d8025f830625192a": {
+                  "action": "ALLOW"
+                },
+                "global:Project-Owners": {
+                  "action": "ALLOW"
+                }
+              }
+            }
+          }
+        }
+    ]
+  }
