@@ -25,7 +25,7 @@ def get_project_mes(project_name):
     # print (r.status_code)
     if r.status_code == 200:
         rel_content = r.content[4:]
-        # print (r.content)
+        print (r.content)
         s = json.loads(rel_content)
         print (s.keys())
 
