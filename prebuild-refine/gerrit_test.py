@@ -18,13 +18,13 @@ from requests.auth import HTTPDigestAuth
 def get_project_mes(project_name):
     data = urllib.urlencode({'project':project_name})
     print (data)
-    gerrit_get_url = "http://10.27.254.101:2089/a/access/?%s" % data
-    # gerrit_get_url = "http://10.27.254.101:2089/groups/"
+    # gerrit_get_url = "http://10.27.254.101:2089/a/access/?%s" % data
+    gerrit_get_url = "http://10.27.254.101:2089/a/groups/"
     # gerrit_get_url = "http://10.27.254.101:2089/"
     print (gerrit_get_url)
     r = requests.get(url=gerrit_get_url, auth=HTTPDigestAuth('ronnyjiang','dbwhhp4E3tjC'))
 
-    # print (r.status_code)
+    print (r.status_code)
     if r.status_code == 200:
         rel_content = r.content[4:]
         print (r.content)
