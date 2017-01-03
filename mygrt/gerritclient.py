@@ -63,19 +63,24 @@ class GerritClient(object):
 
 
     def getAccessInfo(self,projectname):
-        data = urllib.urlencode({'project': projectname})
-        addr = "a/access/?%s" % data
+        projecturl = urllib.urlencode({'project': projectname})
+        addr = "a/access/?%s" % projecturl
         return self.GET(address=addr)
+
+    def putAccessInfo(self,projectname,data):
+        projecturl = urllib.urlencode({'project': projectname})
+        addr = "a/access/?%s" % projecturl
+        return self.PUT(address=addr,data=data)
 
     def GET(self,address):
         return self.send(address,method="GET")
 
 
     def POST(self,address,data):
-        return self.send(address,method="POST")
+        return self.send(address,method="POST",data=data)
 
     def PUT(self,address,data):
-        return self.send(address,method="PUT")
+        return self.send(address,method="PUT",data=data)
 
     def send(self,addr,method,data={}):
         response = None
@@ -104,7 +109,12 @@ class GerritClient(object):
                                     data=json.dumps(data))
 
         responseJson = response.content.replace(')]}\'','',1)
-        return json.loads(responseJson)
+
+
+        if response.ok:
+            return json.loads(responseJson)
+        else:
+            print "================"
 
 
 def main():
@@ -114,7 +124,7 @@ def main():
     # res = mygerrit.GET("groups/")
     #project_name = 'android/Billing'
     project_branch = 'master'
-    project_name="android/Live"
+    project_name="android/Settings"
     # data = urllib.urlencode({'project': project_name})
     """
     u'refs/heads/master': {
@@ -133,10 +143,92 @@ def main():
             }
     },
     """
-    res = mygerrit.GET("a/groups/?owned&q=tools")
-    print (res)
-    # resAccessinfo = mygerrit.getAccessInfo(project_name)
-    # verify_branch = "refs/heads/%s" % project_branch
+    # res = mygerrit.GET("a/groups/?owned&q=tools")
+    # print (res)
+    resAccessinfo = mygerrit.getAccessInfo(project_name)
+    verify_branch = "refs/heads/%s" % project_branch
+    print (resAccessinfo)
+    print (resAccessinfo.keys())
+    # print (resAccessinfo[project_name].keys())
+    # print (resAccessinfo[project_name]["local"].keys())
+    # print (resAccessinfo[project_name]["local"][verify_branch])
+    # print (resAccessinfo[project_name]["local"][verify_branch].keys())
+    # print (resAccessinfo[project_name]["local"][verify_branch]["permissions"])
+    # print (resAccessinfo[project_name]["local"][verify_branch]["permissions"].keys())
+
+
+    # verified_data = {project_name:
+    #                      {"local":{verify_branch:
+    #                                {"permissions":
+    #                                     {"label-Verified":
+    #                                          {"rules":
+    #                                               {"827de1e3b53db7a2f6c1a3ee24b3f2d7a47f0f8a":
+    #                                                    {"action": "ALLOW",
+    #                                                     "max": 1,
+    #                                                     "min": -1}
+    #                                                },
+    #                                           "exclusive": True,
+    #                                           "label": "Verified"}
+    #                                      }
+    #                                 }
+    #                            }
+    #                       }
+    #                  }
+
+
+    verified_data = {"add":[verify_branch:{"permissions":{"label-Verified":{"rules":{"827de1e3b53db7a2f6c1a3ee24b3f2d7a47f0f8a":{"action": "ALLOW","max": 1,"min": -1}},"exclusive": True,"label": "Verified"}}}]}
+
+    result = mygerrit.POST(address="a/projects/android%2FSettings/access",data=verified_data)
+
+    print (result)
+
+    # resAccessinfo[project_name]["local"][verify_branch] = verified_data
+    #
+    # aa_str = '{"android/Settings": {"local": {"refs/heads/master": {"permissions": {"label-Verified": {"rules": {"827de1e3b53db7a2f6c1a3ee24b3f2d7a47f0f8a": {"action": "ALLOW", "max": 1, "min": -1}}, "exclusive": true, "label": "Verified"}}}}}}'
+    # newresAccessinfo = mygerrit.putAccessInfo(projectname=project_name,data=json.loads(aa_str))
+    # print (verified_data.keys())
+    # print (verified_data[project_name])
+    # print (verified_data[project_name].keys())
+    # print (verified_data[project_name]["local"])
+    # print (verified_data[project_name]["local"].keys())
+    # print (verified_data[project_name]["local"][verify_branch])
+    # print (verified_data[project_name]["local"][verify_branch].keys())
+    # print (verified_data[project_name]["local"][verify_branch]["permissions"])
+    # print (verified_data[project_name]["local"][verify_branch]["permissions"].keys())
+    # print (verified_data[project_name]["local"][verify_branch]["permissions"]["label-Verified"])
+    # print (verified_data[project_name]["local"][verify_branch]["permissions"]["label-Verified"].keys())
+    # print (verified_data[project_name]["local"][verify_branch]["permissions"]["label-Verified"]["rules"])
+    # print (verified_data[project_name]["local"][verify_branch]["permissions"]["label-Verified"]["rules"].keys())
+
+    # print (resAccessinfo[project_name]["local"]["refs/*"])
+    # print (resAccessinfo[project_name]["local"]["refs/*"]["permissions"]["label-Verified"])
+
+    # verified_data = {"permissions":
+    #                      {"label-Verified":
+    #                           {"rules":
+    #                                {"827de1e3b53db7a2f6c1a3ee24b3f2d7a47f0f8a":
+    #                                     {"action": "ALLOW",
+    #                                      "max": 1,
+    #                                      "min": -1}
+    #                                 },
+    #                            "exclusive": True,
+    #                            "label": "Verified"
+    #                            }
+    #                       }
+    #                  }
+    # print (type(verified_data))
+    # verified_data["permissions"] = "label-Verified"
+    # verified_data["permissions"]["label-Verified"] = ["rules","exclusive","label"]
+    # verified_data["permissions"]["label-Verified"]["exclusive"] = True
+    # verified_data["permissions"]["label-Verified"]["label"] = "Verified"
+    #
+    # verified_data["permissions"]["label-Verified"]["rules"] = 0
+
+
+
+    # print (verified_data)
+    # verified_data["permissions"]["label-Verified"] =
+    # resAccessinfo[project_name]["local"][verify_branch]={u'permissions': {u'label-Verified': {u'rules': {u'827de1e3b53db7a2f6c1a3ee24b3f2d7a47f0f8a': {u'action': u'ALLOW', u'max': 1, u'min': -1}}, u'exclusive': True, u'label': u'Verified'}}}
     # if verify_branch in resAccessinfo[project_name]["local"].keys():
     #     print (resAccessinfo[project_name]["local"][verify_branch])
     # res = mygerrit.getAccessInfo(project_name)[project_name]["local"]["refs/heads/master"]

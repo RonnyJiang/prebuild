@@ -63,11 +63,11 @@ def analyzeArgs(args):
 def init_prebuild_project(project_name,project_branch):
     LOG.info("Init project:%s ,branch:%s" % (project_name, project_branch))
 
-def add_refs_verified_context(resAccessinfo,refslabel,):
-    if refslabel in resAccessinfo[resAccessinfo.keys()]["local"].keys():
-        print ("--%s is verfied for %s--" % (testProjKey, refslabel))
+def add_refs_verified_context(resAccessinfo,refslabel,project_name):
+    if refslabel in resAccessinfo[project_name]["local"].keys():
+        print ("***%s is verfied for %s----%s" % (project_name, refslabel,resAccessinfo[project_name]["local"].keys()))
     else:
-        print ("--- %s is not verfied for %s ---" % (testProjKey, refslabel))
+        print ("--- %s is not verfied for %s ---%s" % (project_name, refslabel,resAccessinfo[project_name]["local"].keys()))
 
 def add_refs_review_context():
     pass
@@ -184,12 +184,11 @@ def main():
     print (test_project_list)
     if test_project_list is not None:
 
-
         for testProjKey in test_project_list.keys():
             resAccessinfo = mygerritclient.getAccessInfo(projectname=testProjKey)
             refslabel = "refs/heads/%s" % test_project_list[testProjKey]
 
-            add_refs_verified_context(resAccessinfo=resAccessinfo,refslabel=refslabel)
+            add_refs_verified_context(resAccessinfo=resAccessinfo,refslabel=refslabel,project_name=testProjKey)
     else:
         LOG.info("Init failed! Please check the file: %s" % sys.argv[1])
     # change_remote_verify_rights()
