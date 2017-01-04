@@ -8,31 +8,37 @@
  @Software: PyCharm  @since:python 3.5.2(32bit) on 16-12-27.下午12:43
 """
 
+from mychange import Change
+from restclient import RestClient
 
-from change import Change, CommentsList
-from connectionhelper import ConnectionHelper
 class Gerrit(object):
     conn = None
-    def __init__(self, user, password, url):
-        self.conn = ConnectionHelper(user, password, url)
-    def getReviewedChanges(self):
-return self.conn.GET("a/changes/?q=reviewer:"+ self.conn.user+"+AND+status:open")
-def getChange(self, changeId):
-return Change(self.conn, changeId)
+    def __init__(self,user,password,url):
+        self.conn = RestClient(user,password,url)
+
+    def getChange(self,changeId):
+        return Change(self.conn,changeId)
+
+    def getGroupUUID(self,groupname):
+        try:
+            # addr = "a/groups/"
+            addr = "a/groups/?owned&q=%s" % groupname
+            allgroups = self.conn.GET(address=addr)
+            if groupname in allgroups.keys():
+                return allgroups[groupname]["owner_id"]
+            else:
+                return None
+        except StandardError,e:
+            print 'except:', e
+
+
 def main():
-gerrit = Gerrit("", "", "")
-changeId = ""
-# changes = gerrit.getReviewedChanges()
-# print changes
-# for c in changes:
-# print c.owner.name
-# change = gerrit.getChange(changeId)
-# print change.changeInfo.id
-# # print change.createDraft("db/rules-db.sql", 584, "TEST DRAFT COMMENT")
-# cl = CommentsList ()
-# cl.addComment(path = "db/rules-db.sql", line = 581, message ="TEST COMMENT")
-# print change.setReview(message = "TEST MESS", codeReview = -1, verified = -1, comments =cl)
-# # r = change.rebase()
-# print r
+    gerrit =Gerrit("pre_build","Tr9WvxfyYuAk","http://10.27.254.101:2089")
+    uuid = gerrit.getGroupUUID("tools")
+    print (uuid)
+
+    print (gerrit.getChange("58efe6627c0265af6eaa8bd076c41e7436ebf002"))
+
 if __name__ == "__main__":
-main()
+    main()
+

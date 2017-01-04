@@ -9,7 +9,15 @@
 """
 
 import os
-class changes(object):
+class Change(object):
     changeInfo = None
     changeUrl = None
     conn = None
+    def __init__(self,conn,changeId):
+        self.conn = conn
+        self.changeInfo = self.conn.GET(self.conn.GET("a/changes/?q=" + changeId + "&o=CURRENT_REVISION&o=DOWNLOAD_COMMANDS")[0])
+        # self.changeUrl = os.path.join("a/changes/", self.changeInfo["id"])
+        # self.changeUrl = "%s/%s" % ("a/changes/",self.changeInfo["id"])
+
+    def setReview(self):
+        pass
