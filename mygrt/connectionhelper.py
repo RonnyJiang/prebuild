@@ -11,6 +11,7 @@ class ConnectionHelper(object):
     user = None
     password = None
 
+
     def __str__(self):
         return self.user + ":" + self.password + " " + self.url
 
@@ -29,6 +30,7 @@ class ConnectionHelper(object):
         return self.send(address, "PUT", data)
 
     def send(self, addr, method, data={}):
+        response = None
         address = os.path.join(self.url, addr)
         headers = {'Content-Type': 'application/json;charset=UTF-8',
                    'Accept': 'application/json'

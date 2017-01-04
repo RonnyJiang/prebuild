@@ -8,3 +8,8 @@
  @Software: PyCharm  @since:python 3.5.2(32bit) on 16-12-27.下午12:39
 """
 
+import os
+class changes(object):
+    changeInfo = None
+    changeUrl = None
+    conn = None

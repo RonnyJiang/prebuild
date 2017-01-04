@@ -7,6 +7,8 @@
  @File: 
  @Software: PyCharm  @since:python 3.5.2(32bit) on 16-12-27.下午12:43
 """
+
+
 from change import Change, CommentsList
 from connectionhelper import ConnectionHelper
 class Gerrit(object):

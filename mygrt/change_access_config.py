@@ -11,7 +11,7 @@ import logging
 import os
 import re
 import sys
-import gerritclient
+import restclient
 
 global RESET_REMOTE_CONFIG
 RESET_REMOTE_CONFIG = False
@@ -175,9 +175,9 @@ def main():
     LOG.info("------------------------------------------------------")
     LOG.info("main IN")
     analyzeArgs(sys.argv)
-    mygerritclient = gerritclient.GerritClient(username="pre_build",
-                                               passwd="Tr9WvxfyYuAk",
-                                               url="http://10.27.254.101:2089")
+    mygerritclient = restclient.RestClient(username="pre_build",
+                                             passwd="Tr9WvxfyYuAk",
+                                             url="http://10.27.254.101:2089")
     print (mygerritclient)
     print (mygerritclient.getGroupUUID("tools"))
     test_project_list = check_file_and_get_project_list(sys.argv[1])
